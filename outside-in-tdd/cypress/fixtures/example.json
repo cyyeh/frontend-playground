@@ -1,0 +1,23 @@
+{
+  "demand": 30,
+  "price": 20,
+  "producers": [
+    {
+      "id": "Byzantium",
+      "cost": 10,
+      "production": 9
+    },
+    {
+      "id": "Attalia",
+      "cost": 12,
+      "production": 10
+    },
+    {
+      "id": "Sinope",
+      "cost": 10,
+      "production": 6
+    }
+  ],
+  "shortfall": 5,
+  "profit": 230
+}
