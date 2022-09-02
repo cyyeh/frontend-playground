@@ -1,5 +1,5 @@
-import {Provider} from 'react-redux'
-import {configureStore, createSlice} from '@reduxjs/toolkit'
+import { Provider } from 'react-redux'
+import { configureStore, createSlice } from '@reduxjs/toolkit'
 
 import TaskList from './TaskList.component'
 import * as TaskStories from '../Task/Task.stories'
@@ -7,19 +7,19 @@ import * as TaskStories from '../Task/Task.stories'
 // A super-simple mock of the state of the store
 export const MockedState = {
   tasks: [
-    {...TaskStories.Default.args.task, id: '1', title: 'Task 1'},
-    {...TaskStories.Default.args.task, id: '2', title: 'Task 2'},
-    {...TaskStories.Default.args.task, id: '3', title: 'Task 3'},
-    {...TaskStories.Default.args.task, id: '4', title: 'Task 4'},
-    {...TaskStories.Default.args.task, id: '5', title: 'Task 5'},
-    {...TaskStories.Default.args.task, id: '6', title: 'Task 6'}
+    { ...TaskStories.Default.args.task, id: '1', title: 'Task 1' },
+    { ...TaskStories.Default.args.task, id: '2', title: 'Task 2' },
+    { ...TaskStories.Default.args.task, id: '3', title: 'Task 3' },
+    { ...TaskStories.Default.args.task, id: '4', title: 'Task 4' },
+    { ...TaskStories.Default.args.task, id: '5', title: 'Task 5' },
+    { ...TaskStories.Default.args.task, id: '6', title: 'Task 6' }
   ],
   status: 'idle',
   error: null
 }
 
 // A super-simple mock of a redux store
-const Mockstore = ({taskboxState, children}) => (
+const Mockstore = ({ taskboxState, children }) => (
   <Provider
     store={configureStore({
       reducer: {
@@ -28,7 +28,7 @@ const Mockstore = ({taskboxState, children}) => (
           initialState: taskboxState,
           reducers: {
             udpdateTaskState: (state, action) => {
-              const {id, newTaskState} = action.payload
+              const { id, newTaskState } = action.payload
               const task = state.tasks.findIndex(task => task.id === id)
               if (task >= 0) {
                 state.tasks[task].state = newTaskState
@@ -56,7 +56,7 @@ const Mockstore = ({taskboxState, children}) => (
 export default {
   component: TaskList,
   title: 'TaskList',
-  decorators: [story => <div style={{padding: '3rem'}}>{story()}</div>],
+  decorators: [story => <div style={{ padding: '3rem' }}>{story()}</div>],
   excludeStories: /.*MockedState$/
 }
 
@@ -72,7 +72,7 @@ WithPinnedTasks.decorators = [
   story => {
     const pinnedTasks = [
       ...MockedState.tasks.slice(0, 5),
-      {id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED'}
+      { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED' }
     ]
 
     return (

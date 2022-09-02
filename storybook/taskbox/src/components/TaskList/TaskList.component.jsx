@@ -1,9 +1,9 @@
 // or use TypeScript
 import PropTypes from 'prop-types'
-import {useDispatch, useSelector} from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import Task from '../Task/Task.component'
-import {updateTaskState} from '../../lib/store'
+import { updateTaskState } from '../../lib/store'
 
 const TaskList = () => {
   // We're retrieving our state from the store
@@ -18,16 +18,16 @@ const TaskList = () => {
 
     return filteredTasks
   })
-  const {status} = useSelector(state => state.taskbox)
+  const { status } = useSelector(state => state.taskbox)
 
   const dispatch = useDispatch()
   const pinTask = value => {
     // We're dispatching the Pinned event back to our store
-    dispatch(updateTaskState({id: value, newTaskState: 'TASK_PINNED'}))
+    dispatch(updateTaskState({ id: value, newTaskState: 'TASK_PINNED' }))
   }
   const archiveTask = value => {
     // We're dispatching the Archive event back to our store
-    dispatch(updateTaskState({id: value, newTaskState: 'TASK_ARCHIVED'}))
+    dispatch(updateTaskState({ id: value, newTaskState: 'TASK_ARCHIVED' }))
   }
 
   const LoadingRow = (

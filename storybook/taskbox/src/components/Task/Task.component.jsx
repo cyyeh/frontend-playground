@@ -1,7 +1,7 @@
 // or use TypeScript
 import PropTypes from 'prop-types'
 
-const Task = ({task: {id, title, state}, onArchiveTask, onPinTask}) => (
+const Task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => (
   <div className={`list-item ${state}`}>
     <label
       htmlFor='checked'
