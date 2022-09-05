@@ -11,8 +11,10 @@ jobs:
     # The list of steps that the action will go through
     steps:
       - uses: actions/checkout@v1
-      - run: yarn
-        working-directory: ./storybook/learnstorybook-design-system
+      - name: Install dependencies
+        run: |
+          cd ./storybook/learnstorybook-design-system
+          yarn
         #👇 Adds Chromatic as a step in the workflow
       - uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action
