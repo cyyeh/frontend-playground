@@ -7,3 +7,5 @@
 - [GraphQL explained](https://www.apollographql.com/blog/graphql/basics/graphql-explained/)
 - [GraphQL Concepts Visualized](https://www.apollographql.com/blog/graphql/basics/the-concepts-of-graphql/)
 - [GraphQL vs. Falcor](https://www.apollographql.com/blog/backend/graphql-vs-falcor-4f1e9cbf7504/)
+- [The GraphQL Gudie](https://graphql.guide/)
+- [GraphQL Tutorials](https://www.apollographql.com/tutorials/)
