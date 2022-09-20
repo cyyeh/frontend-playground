@@ -13,7 +13,8 @@ This repo is where I play and experiment with frontend development tools, though
 - [ ] Immutable.js
 - [ ] Different state management methods
 - [ ] Different rendering methods
-- [ ] Right initial setup of the frontend project
+- [ ] Setup of the frontend project
+  - [ ] create-react-app vs. vite vs. craco
 - [ ] Storybook
 - [ ] Micro frontends
 - [ ] WebAssembly
