@@ -21,3 +21,4 @@ This repo is where I play and experiment with frontend development tools, though
 - [ ] PWA
 - [ ] Monorepo
 - [ ] Visualization
+- [ ] TypeScript
